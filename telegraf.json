@@ -1,0 +1,140 @@
+{
+  "Telegraf Starter": {
+    "prefix": "tfs",
+    "body": [
+      "const { Telegraf } = require(\"telegraf\");",
+      "",
+      "const app = new Telegraf($1);",
+      "$0",
+      "app.launch();",
+      "",
+      "process.once(\"SIGINT\", () => app.stop(\"SIGINT\"));",
+      "process.once(\"SIGTERM\", () => app.stop(\"SIGTERM\"));"
+    ]
+  },
+  "Telegraf Starter ESM": {
+    "prefix": "tfsm",
+    "body": [
+      "import { Telegraf } from \"telegraf\";",
+      "",
+      "const app = new Telegraf($1);",
+      "$0",
+      "app.launch();",
+      "",
+      "process.once(\"SIGINT\", () => app.stop(\"SIGINT\"));",
+      "process.once(\"SIGTERM\", () => app.stop(\"SIGTERM\"));"
+    ]
+  },
+  "Telegraf Command": {
+    "prefix": "tfc",
+    "body": ["app.command(\"$1\", (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf Command Asynchronous": {
+    "prefix": "tfca",
+    "body": ["app.command(\"$1\", async (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Something": {
+    "prefix": "tfn",
+    "body": ["app.on(\"$1\", (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Something Asynchronous": {
+    "prefix": "tfna",
+    "body": ["app.on(\"$1\", async (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Text": {
+    "prefix": "tfntxt",
+    "body": ["app.on(\"text\", (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Text Asynchronous": {
+    "prefix": "tfntxta",
+    "body": ["app.on(\"text\", async (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Callback Query": {
+    "prefix": "tfncq",
+    "body": ["app.on(\"callback_query\", (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Callback Query Asynchronous": {
+    "prefix": "tfncqa",
+    "body": ["app.on(\"callback_query\", async (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Inline Query": {
+    "prefix": "tfniq",
+    "body": ["app.on(\"inline_query\", (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf On Inline Query Asynchronous": {
+    "prefix": "tfniqa",
+    "body": ["app.on(\"inline_query\", async (ctx) => {", "  $0", "});"]
+  },
+  "Telegraf Base Scene": {
+    "prefix": "tfbs",
+    "body": [
+      "const $1Scene = new Scenes.BaseScene<Scenes.SceneContext>(\"$1\");",
+      "$1Scene.enter((ctx) => {",
+      "  $0",
+      "});"
+    ]
+  },
+  "Telegraf Base Scene Asynchronous": {
+    "prefix": "tfbsa",
+    "body": [
+      "const $1Scene = new Scenes.BaseScene<Scenes.SceneContext>(\"$1\");",
+      "$1Scene.enter(async (ctx) => {",
+      "  $0",
+      "});"
+    ]
+  },
+  "Telegraf Stage Base Scene": {
+    "prefix": "tfsbs",
+    "body": "const stage = new Scenes.Stage<Scenes.SceneContext>([$1]);"
+  },
+  "Telegraf Stage Base Scene With TTL": {
+    "prefix": "tfsbst",
+    "body": [
+      "const stage = new Scenes.Stage<Scenes.SceneContext>([$1], {",
+      "  ttl: 10,",
+      "});"
+    ]
+  },
+  "Telegraf Wizard Scene": {
+    "prefix": "tfws",
+    "body": [
+      "const $1Wizard = new Scenes.WizardScene(",
+      "  \"$1-wizard\",",
+      "  (ctx) => {",
+      "    $0",
+      "  }",
+      ");"
+    ]
+  },
+  "Telegraf Wizard Scene Asynchronous": {
+    "prefix": "tfwsa",
+    "body": [
+      "const $1Wizard = new Scenes.WizardScene(",
+      "  \"$1-wizard\",",
+      "  async (ctx) => {",
+      "    $0",
+      "  }",
+      ");"
+    ]
+  },
+  "Telegraf Stage Wizard Scene": {
+    "prefix": "tfsws",
+    "body": [
+      "const stage = new Scenes.Stage<Scenes.WizardContext>([$1], {",
+      "  default: \"$2-wizard\",",
+      "});"
+    ]
+  },
+  "Telegraf Return Wizard Scene Next": {
+    "prefix": "tfwsrn",
+    "body": "return ctx.wizard.next();"
+  },
+  "Telegraf CTX": {
+    "prefix": "tfctx",
+    "body": ["(ctx) => {", "  $0", "}"]
+  },
+  "Telegraf CTX Asynchronous": {
+    "prefix": "tfctxa",
+    "body": ["async (ctx) => {", "  $0", "}"]
+  }
+}
