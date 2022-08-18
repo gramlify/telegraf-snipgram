@@ -2,7 +2,7 @@
   "name": "telegraf-snipgram",
   "displayName": "Telegraf Snipgram",
   "description": "A snippet pack to make you more productive working with Telegraf.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "gramlify",
   "bugs": {
     "url": "https://github.com/gramlify/telegraf-snipgram/issues"

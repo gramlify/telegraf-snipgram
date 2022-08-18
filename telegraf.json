@@ -130,11 +130,11 @@
     "body": "return ctx.wizard.next();"
   },
   "Telegraf CTX": {
-    "prefix": "tfctx",
+    "prefix": ["tc", "tfctx"],
     "body": ["(ctx) => {", "  $0", "}"]
   },
   "Telegraf CTX Asynchronous": {
-    "prefix": "tfctxa",
+    "prefix": ["tca", "tfctxa"],
     "body": ["async (ctx) => {", "  $0", "}"]
   }
 }

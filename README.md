@@ -178,7 +178,7 @@ const stage = new Scenes.Stage<Scenes.WizardContext>([], {
 return ctx.wizard.next();
 ```
 
-### [tfctx] Telegraf CTX
+### [tc] [tfctx] Telegraf CTX
 
 ```ts
 (ctx) => {
@@ -186,7 +186,7 @@ return ctx.wizard.next();
 };
 ```
 
-### [tfctxa] Telegraf CTX Asynchronous
+### [tca] [tfctxa] Telegraf CTX Asynchronous
 
 ```ts
 async (ctx) => {
